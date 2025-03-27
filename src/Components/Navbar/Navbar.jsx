@@ -13,6 +13,10 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 
 const Navbar = () => {
   const [userPic,setUserpic]=useState("https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/434px-Unknown_person.jpg")
+  const [navbarModel,setNavbarModel]=useState(false)
+  function  handleClickModel(){
+    setNavbarModel(prev => !prev)
+  }
   return (
     <>
      <div className="navbar">
@@ -42,14 +46,17 @@ const Navbar = () => {
         {/* <MoreVertIcon sx={{ color: "white" ,cursor:"pointer",fontSize:"30px"}}/> */}
         <VideoCallIcon sx={{ fontSize: "30px", cursor: "pointer", color: "white" }} />
         <NotificationsIcon sx={{ fontSize: "30px", cursor: "pointer", color: "white" }} />
-      <img src={userPic} className='navbar-right-logo' alt="Logo" />
+      
+      <img onClick={handleClickModel} src={userPic} className='navbar-right-logo' alt="Logo" />
+      {
+        navbarModel &&
       <div className="navbar-modal">
         <div className="navbar-modal-option">Profile</div>
         <div className="navbar-modal-option">Logout</div>
         <div className="navbar-modal-option">Login</div>
       </div>
-       
-       </div>
+      }
+       </div> 
       </div>
      
     </>
@@ -57,3 +64,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
