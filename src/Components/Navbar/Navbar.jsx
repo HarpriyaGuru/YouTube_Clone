@@ -1,12 +1,9 @@
 import React,{useState} from 'react'
 import './Navbar.css'
-// import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import SearchIcon from '@mui/icons-material/Search';
 import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
-//  import MoreVertIcon from '@mui/icons-material/MoreVert';
-//  import PersonIcon from '@mui/icons-material/Person';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 
