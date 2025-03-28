@@ -11,18 +11,23 @@ import VideoCallIcon from '@mui/icons-material/VideoCall';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 
 
-const Navbar = () => {
+const Navbar = ({setSideNavbarFunc,sideNavbar}) => {
   const [userPic,setUserpic]=useState("https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/434px-Unknown_person.jpg")
-  const [navbarModel,setNavbarModel]=useState(false)
+  const [navbarModal,setNavbarModal] = useState(false);
+
   function  handleClickModel(){
-    setNavbarModel(prev => !prev)
+    setNavbarModal(prev => !prev)
   }
+  const sideNavbarFunc=()=>{
+    setSideNavbarFunc(!sideNavbar)
+  }
+
   return (
     <>
      <div className="navbar">
      <div className="navbar-left">
-        <div className="navbarHamberger" >
-          <MenuIcon sx={{color:"white"}} />
+        <div className="navbarHamberger" onClick={sideNavbarFunc}>
+          <MenuIcon sx={{ color: "white" }} />
         </div>
         <div className="navbar_youtubeImg">
         <YouTubeIcon sx={{ fontSize: "34px" }} className='navbar_youtubeImage' />
@@ -46,22 +51,21 @@ const Navbar = () => {
         {/* <MoreVertIcon sx={{ color: "white" ,cursor:"pointer",fontSize:"30px"}}/> */}
         <VideoCallIcon sx={{ fontSize: "30px", cursor: "pointer", color: "white" }} />
         <NotificationsIcon sx={{ fontSize: "30px", cursor: "pointer", color: "white" }} />
-      
       <img onClick={handleClickModel} src={userPic} className='navbar-right-logo' alt="Logo" />
+      
       {
-        navbarModel &&
+        navbarModal &&
       <div className="navbar-modal">
         <div className="navbar-modal-option">Profile</div>
         <div className="navbar-modal-option">Logout</div>
         <div className="navbar-modal-option">Login</div>
       </div>
       }
+      
        </div> 
+      
       </div>
-     
     </>
   )
 }
-
 export default Navbar
-
