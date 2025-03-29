@@ -20,6 +20,7 @@ const HomePage = ({ sideNavbar }) => {
       </div>
 
       <div className={sideNavbar?"home_mainPage":"home_mainPageWithoutLink"}>
+       <Link to="/watch/12">
         <div className="youtube_Video">
           <div className="youtube_thumbnailBox">
             <img 
@@ -45,7 +46,7 @@ const HomePage = ({ sideNavbar }) => {
             </div>
           </div>
         </div>
-
+        </Link>
 
         <div className="youtube_Video">
           <div className="youtube_thumbnailBox">

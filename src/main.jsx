@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter ,RouterProvider} from 'react-router-dom'
 import Video from './Pages/Video/Video.jsx'
+import Channel from './Pages/Channel/Channel.jsx'
 
 const appRouter=createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const appRouter=createBrowserRouter([
   {
     path:"/watch/:id",
     element:<Video />
+  },
+  {
+    path:"/channel",
+    element:<Channel />
   }
 ]);
 createRoot(document.getElementById('root')).render(
