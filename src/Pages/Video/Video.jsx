@@ -3,6 +3,7 @@ import "./Video.css"
 import Navbar from '../../Components/Navbar/Navbar'
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbDownAltOutlinedIcon from '@mui/icons-material/ThumbDownAltOutlined';
+import { Link } from 'react-router-dom';
 
 const Video = () => {
   return (
@@ -20,9 +21,9 @@ const Video = () => {
               </div>
               <div className="youtube_video_ProfileBlock">
                 <div className="youtube_video_ProfileBlock_left">
-                  <div className="youtube_video_ProfileBlock_left_img">
+                  <Link to={"/user/12"} className="youtube_video_ProfileBlock_left_img">
           <img src="https://img.freepik.com/free-vector/user-circles-set_78370-4704.jpg?semt=ais_hybrid" alt="pic" className='youtube_video_ProfileBlock_left_image'/>
-                  </div>
+                  </Link>
                   <div className="youtubeVideo_subView">
                     <div className="youtubePostProfileName">
                       {"User 1"}
