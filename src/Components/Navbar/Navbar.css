@@ -13,6 +13,23 @@
     background-color: black;
     z-index: 10;
 }   
+.btn {
+    background-color: #2c2727;
+    border: none; 
+    border-radius: 50px; 
+    color: white; 
+    padding: 8px 16px;
+    font-size: 14px; 
+    display: flex; 
+    align-items: center; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+
+.btn:hover {
+    background-color:#1f1d1d ; 
+}
 
 .navbar-left{
     gap: 10px;

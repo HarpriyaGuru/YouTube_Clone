@@ -5,6 +5,8 @@ import App from './App.jsx'
 import { createBrowserRouter ,RouterProvider} from 'react-router-dom'
 import Video from './Pages/Video/Video.jsx'
 import Channel from './Pages/Channel/Channel.jsx'
+import VideoUpload from './Pages/VideoUpload/VideoUpload.jsx'
+import SignUp from './Pages/SignUp/SignUp.jsx'
 
 const appRouter=createBrowserRouter([
   {
@@ -18,6 +20,14 @@ const appRouter=createBrowserRouter([
   {
     path:"/user/:id",
     element:<Channel />
+  },
+  {
+    path:"/:id/upload",
+    element:<VideoUpload />
+  },
+  {
+    path:"/signup",
+    element:<SignUp />
   }
 ]);
 createRoot(document.getElementById('root')).render(

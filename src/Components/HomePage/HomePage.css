@@ -45,6 +45,10 @@
     cursor: pointer;
 }
 
+.homePage_option.selected {
+    background-color: rgb(85, 85, 85); /* Highlight selected option */
+}
+
 .home_mainPage {
     display: grid;
     background-color: black;
@@ -138,3 +142,10 @@
     font-size: 14px;
     color: rgb(170,170,170);
 }
+.noVideosFound {
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 18px;
+  }
+  

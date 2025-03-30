@@ -4,23 +4,28 @@ import HomeIcon from '@mui/icons-material/Home';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import RecentActorsIcon from '@mui/icons-material/RecentActors';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import HistoryIcon from '@mui/icons-material/History';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import SmartDisplayOutlinedIcon from '@mui/icons-material/SmartDisplayOutlined';
 import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
-import ContentCutIcon from '@mui/icons-material/ContentCut';
+import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
+import MovieIcon from '@mui/icons-material/Movie';
+import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import { Link } from 'react-router-dom';
+
 
 const SideNavbar = ({sideNavbar}) => {
   return (
     <div className={sideNavbar?"home-sideNavbar":"homeSideNavbarHide"} >
       {/* Top Section */}
       <div className="home_sideNavbarTop">
-        <div className="home_sideNavbarTopOption">
+        <Link to={"/"} className="home_sideNavbarTopOption">
           <HomeIcon />
           <div className="home_sideNavbarTopOptionTitle">Home</div>
-        </div>
+        </Link>
         <div className="home_sideNavbarTopOption">
           <VideocamIcon />
           <div className="home_sideNavbarTopOptionTitle">Shorts</div>
@@ -36,10 +41,6 @@ const SideNavbar = ({sideNavbar}) => {
         <div className="home_sideNavbarTopOption">
           <div className="home_sideNavbarTopOptionTitle">You</div>
           <ChevronRightIcon />
-        </div>
-        <div className="home_sideNavbarTopOption">
-          <RecentActorsIcon />
-          <div className="home_sideNavbarTopOptionTitle">Your Channel</div>
         </div>
         <div className="home_sideNavbarTopOption">
           <HistoryIcon />
@@ -61,10 +62,7 @@ const SideNavbar = ({sideNavbar}) => {
           <ThumbUpAltOutlinedIcon />
           <div className="home_sideNavbarTopOptionTitle">Liked Videos</div>
         </div>
-        <div className="home_sideNavbarTopOption">
-          <ContentCutIcon />
-          <div className="home_sideNavbarTopOptionTitle">Your Clips</div>
-        </div>
+        
       </div>
 
       {/* Subscription Section */}
@@ -104,6 +102,34 @@ const SideNavbar = ({sideNavbar}) => {
           <div className="home_sideNavbarTopOptionTitle">NDTV India</div>
         </div>
       </div>
+      <div className="home_sideNavbarMiddle">
+        <div className="home_sideNavbarTopOption">
+        <div className="home_sideNavbarTopOptionTitleHeader">Explore</div>
+        </div>
+        <div className="home_sideNavbarTopOption">
+          <LocalFireDepartmentIcon />
+          <div className="home_sideNavbarTopOptionTitle">Trending</div>
+        </div>
+        <div className="home_sideNavbarTopOption">
+          <ShoppingBagIcon />
+          <div className="home_sideNavbarTopOptionTitle">Shopping</div>
+        </div>
+        <div className="home_sideNavbarTopOption">
+          <MovieIcon />
+          <div className="home_sideNavbarTopOptionTitle">Movies</div>
+        </div>
+        <div className="home_sideNavbarTopOption">
+          <VideogameAssetIcon />
+          <div className="home_sideNavbarTopOptionTitle">Gaming</div>
+        </div>
+        <div className="home_sideNavbarTopOption">
+          <MusicNoteIcon />
+          <div className="home_sideNavbarTopOptionTitle">Music</div>
+        </div>
+        
+      </div>
+      
+
     </div>
   );
 };

@@ -1,0 +1,37 @@
+.hamburger-container {
+    width: 6rem; /* Equivalent to 24px width from Tailwind */
+    background-color: white;
+    padding: 1rem;
+    height: 100vh; /* Full height of the screen */
+  }
+  
+  /* List styling */
+  .hamburger-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Styling for each list item */
+  .hamburger-item {
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem; /* Spacing between icon and text */
+    color: #4b5563; /* Gray color (similar to text-gray-700 in Tailwind) */
+    font-size: 0.875rem; /* Font size: 14px */
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  /* Styling for the icons */
+  .hamburger-icon {
+    font-size: 1.25rem; /* Size for the icons */
+  }
+  
+  /* Hover effect for the items */
+  .hamburger-item:hover {
+    color: #1f2937; /* Darker gray on hover */
+  }
+  

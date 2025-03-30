@@ -1,4 +1,4 @@
-export const homeVideo=[
+export const homeVideo = [
     {
       "videoId": "video01",
       "title": "Learn React in 30 Minutes",
@@ -6,6 +6,7 @@ export const homeVideo=[
       "description": "A quick tutorial to get started with React.",
       "channelId": "channel01",
       "uploader": "user01",
+      "uploaderProfileImage": "https://img.freepik.com/premium-photo/user-icon-account-icon-3d-illustration_118019-6801.jpg?semt=ais_hybrid",
       "views": 15200,
       "likes": 1023,
       "dislikes": 45,
@@ -27,6 +28,7 @@ export const homeVideo=[
       "description": "A deep dive into closures in JavaScript.",
       "channelId": "channel02",
       "uploader": "user03",
+      "uploaderProfileImage": "https://img.freepik.com/premium-photo/3d-user-interface-design-illustration_249956-1328.jpg?semt=ais_hybrid",
       "views": 8500,
       "likes": 870,
       "dislikes": 30,
@@ -48,6 +50,7 @@ export const homeVideo=[
       "description": "Learn how to create complex layouts using CSS Grid.",
       "channelId": "channel03",
       "uploader": "user05",
+      "uploaderProfileImage": "https://img.freepik.com/premium-photo/sign-up-button-follow-button-3d-illustration_115990-1684.jpg?semt=ais_hybrid",
       "views": 21000,
       "likes": 1532,
       "dislikes": 60,
@@ -69,6 +72,7 @@ export const homeVideo=[
       "description": "A beginner-friendly guide to Node.js.",
       "channelId": "channel04",
       "uploader": "user07",
+      "uploaderProfileImage": "https://img.freepik.com/premium-photo/3d-user-interface-design-illustration_249956-1328.jpg?semt=ais_hybrid",
       "views": 17800,
       "likes": 1120,
       "dislikes": 55,
@@ -90,6 +94,7 @@ export const homeVideo=[
       "description": "Learn the fundamentals of Vue.js.",
       "channelId": "channel05",
       "uploader": "user09",
+      "uploaderProfileImage": "https://img.freepik.com/premium-photo/user-icon-account-icon-3d-illustration_118019-6801.jpg?semt=ais_hybrid",
       "views": 12900,
       "likes": 920,
       "dislikes": 38,
@@ -111,6 +116,7 @@ export const homeVideo=[
       "description": "A comprehensive guide to Python data structures.",
       "channelId": "channel06",
       "uploader": "user11",
+      "uploaderProfileImage": "https://img.freepik.com/free-photo/user-front-side-with-white-background_187299-40007.jpg?semt=ais_hybrid",
       "views": 24600,
       "likes": 1980,
       "dislikes": 78,
