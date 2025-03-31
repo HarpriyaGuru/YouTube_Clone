@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import "./Video.css";
 import Navbar from '../../Components/Navbar/Navbar';
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbDownAltOutlinedIcon from '@mui/icons-material/ThumbDownAltOutlined';
 import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 const Video = () => {
   const [comment, setComment] = useState("");
@@ -11,7 +13,22 @@ const Video = () => {
     { user: "UserName", date: "30-03-2025", text: "my comment 1" }
   ]);
   const [subscribed, setSubscribed] = useState(false);
-
+  const [data,setData]=useState(null);
+  const {id}=useParams();
+  const [videoUrl,setVideoURL]=useState("");
+  // console.log("id:",id);
+  useEffect(()=>{
+    fetchVideoById();
+  },[])
+  const fetchVideoById=async()=> {
+    await axios.get(`http://localhost:3000/videoApi/getbyid/${id}`).then(res=>{console.log(res.data.videos
+    );
+      setData(res.data.videos
+      )
+      setVideoURL(res?.data?.videos?.videoLink)
+    }).catch(err=>{console.log(err);
+    })
+  }
   // Handle adding a comment
   const handleAddComment = () => {
     if (comment.trim()) {
@@ -36,17 +53,19 @@ const Video = () => {
       <div className='video'>
         <div className="videoPostSection">
           <div className="video_youtube">
-            <video src="https://videocdn.cdnpk.net/videos/8cd7cdf2-055e-42e3-a43b-e94bbab57d65/horizontal/previews/clear/small.mp4?token=exp=1743148274~hmac=a960a353d0aafa428021659f464f5ef90632d80cbf523881fdb87e53189158bc" className='video_youtube_video' controls autoPlay width={"400px"} />
+         {
+         data &&  <video src={videoUrl} className='video_youtube_video' controls autoPlay width={"400px"} />
+          }
           </div>
 
           <div className="video_youtubeAbout">
             <div className="video_uTubeTitle">
-              {"javascript for beginners"}
+              {data?.title}
             </div>
 
             <div className="youtube_video_ProfileBlock">
               <div className="youtube_video_ProfileBlock_left">
-                <Link to={"/user/12"} className="youtube_video_ProfileBlock_left_img">
+                <Link to={`/user/${data?.user._id}`} className="youtube_video_ProfileBlock_left_img">
                   <img src="https://img.freepik.com/free-vector/user-circles-set_78370-4704.jpg?semt=ais_hybrid" alt="pic" className='youtube_video_ProfileBlock_left_image' />
                 </Link>
                 <div className="youtubeVideo_subView">

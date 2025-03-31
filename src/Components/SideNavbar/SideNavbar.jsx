@@ -19,7 +19,9 @@ import { Link } from 'react-router-dom';
 
 const SideNavbar = ({sideNavbar}) => {
   return (
-    <div className={sideNavbar?"home-sideNavbar":"homeSideNavbarHide"} >
+    <>
+     {/* <div className={sideNavbar?"home-sideNavbar":"homeSideNavbarHide"} > */}
+     <div className={sideNavbar?"home-sideNavbar":"homeSideNavbarHide"} > 
       {/* Top Section */}
       <div className="home_sideNavbarTop">
         <Link to={"/"} className="home_sideNavbarTopOption">
@@ -131,6 +133,7 @@ const SideNavbar = ({sideNavbar}) => {
       
 
     </div>
+    </>
   );
 };
 

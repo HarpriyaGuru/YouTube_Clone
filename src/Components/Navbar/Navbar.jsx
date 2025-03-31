@@ -15,6 +15,7 @@ const Navbar = ({ setSideNavbarFunc, sideNavbar }) => {
   const [navbarModal, setNavbarModal] = useState(false);
   const navigate = useNavigate();
   const [login,setLogin]=useState(false)
+  
   // login
   function onclickOfPopOption(button){
     setNavbarModal(false)
