@@ -72,3 +72,28 @@ For the backend (Node.js + Express):
 
 
 
+# Usage
+1. Sign Up / Login:
+
+Visit the homepage and click on the "Sign In" button to sign up or log in.
+
+After successful authentication, your username will appear at the top, and you will be redirected to the homepage.
+
+2. Watch Videos:
+
+Browse the grid of videos on the homepage. Click on a video to watch it.
+
+Like/dislike the video and comment in the comment section.
+
+3. Create a Channel:
+
+If you're logged in, you can create a new channel.
+
+Once created, you can upload, edit, and delete videos from your channel.
+
+4. Search & Filter Videos:
+
+Use the search bar to filter videos based on title.
+
+Use category filters to view videos from different categories (e.g., "Trending," "Music").
+
